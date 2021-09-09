@@ -3,7 +3,7 @@ include_once 'User.php';
 
 $insertModel = new User();
 if($_POST){
-    $insertModel->Create($_POST['gender'], $_POST['lName'], $_POST['fName'], $_POST['email'], password_hash($_POST['password'], PASSWORD_DEFAULT));
+    $insertModel->Create($_POST['gender'], $_POST['firstName'], $_POST['lastName'], $_POST['email'], password_hash($_POST['password'], PASSWORD_DEFAULT));
 }
 ?>
 <!doctype html>
@@ -25,12 +25,12 @@ if($_POST){
                 </select>
             </p>
             <p>
-                <label for="name">First Name</label>
-                <input name="fName" type="text" placeholder="Enter first name">
+                <label for="firstname">First Name</label>
+                <input name="firstName" type="text" placeholder="Enter first name">
             </p>
             <p>
-                <label for="lName">First Name</label>
-                <input name="lName" type="text" placeholder="Enter last name">
+                <label for="lastName">First Name</label>
+                <input name="lastName" type="text" placeholder="Enter last name">
             </p>
             <p>
                 <label for="email">Email</label>

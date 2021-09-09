@@ -24,8 +24,8 @@ $users = $userModel->getAll();
         <tbody>
             <tr>
                 <td><?php echo $user['gender'];?></td>
-                <td><?php echo $user['fName'];?></td>
-                <td><?php echo $user['lName'];?></td>
+                <td><?php echo $user['firstName'];?></td>
+                <td><?php echo $user['lastName'];?></td>
                 <td><?php echo $user['email'];?></td>
                 <td>
                     <a href="update.php?id=<?php echo $user['id'];?>">Update</a>

@@ -3,7 +3,7 @@ include_once 'User.php';
 
 $updateModel = new User();
 if($_POST){
-    $updateModel->update($_POST['gender'], $_POST['fName'], $_POST['lName'], $_POST['email'], $_GET['id']);
+    $updateModel->update($_POST['gender'], $_POST['firstName'], $_POST['lastName'], $_POST['email'], $_GET['id']);
 }
 
 $updates = $updateModel->get($_GET['id']); // comes from the URL
@@ -27,13 +27,13 @@ $updates = $updateModel->get($_GET['id']); // comes from the URL
                 </select>
             </p>
             <p>
-                <label for="fName">First Name</label>
-                <input  name="fName" type="text" value="<?php echo $updates['fName'];?>" placeholder="Enter first name">
+                <label for="firstName">First Name</label>
+                <input  name="firstName" type="text" value="<?php echo $updates['firstName'];?>" placeholder="Enter first name">
             </p>
 
             <p>
-                <label for="lName">Name</label>
-                <input name="lName" type="text" value="<?php echo $updates['lName'];?>" placeholder="Enter name">
+                <label for="lastName">Name</label>
+                <input name="lastName" type="text" value="<?php echo $updates['lastName'];?>" placeholder="Enter name">
             </p>
             <p>
                 <label for="email">Email</label>
